@@ -14,7 +14,7 @@ groovy ./get_releases.groovy
 or 
 
 ```
-groovy ./get_pullrequests.groovy
+groovy ./get_all.groovy
 ```
 
 NOTE: this second script will take about 10mins to complete
