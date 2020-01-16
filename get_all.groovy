@@ -58,9 +58,7 @@ orgs.each { org ->
 	}
 }
 
-println repos.size()
-println repos.findAll{ !it.archived }.findAll{ !it.disabled }.size()
-
+def numRepos = repos.findAll{ !it.archived }.findAll{ !it.disabled }.size()
 def issues = []
 def commits = []
 
@@ -124,33 +122,25 @@ def forYear = issuesByYear.findAll{ it.pr }.size()
 def community = issuesByYear.findAll{ it.pr }.findAll{ it.author == 'NONE' }.size()
 def member = issuesByYear.findAll{ it.pr }.findAll{ it.author == 'MEMBER' }.size()
 def contributor = issuesByYear.findAll{ it.pr }.findAll{ it.author == 'CONTRIBUTOR' }.size()
-
-println "For ${year}    : ${forYear}"
-println "PR Break Down"
-println "-----------------"
-println "NONE        : ${community}"
-println "MEMBER      : ${member}"
-println "CONTRIBUTOR : ${contributor}"
-
-def prContrib = issuesByYear.findAll{ it.pr }.collect{ it.user }.unique().size()
-def issueContrib = issuesByYear.collect{ it.user }.unique().size()
-
-println "-----------------"
-println "PR Contrib    : ${prContrib}"
-println "Issue Contrib : ${issueContrib}"
-
+println "| Repos                  | ${numRepos} |"
+println "| Number of PRs          |"
+println "|  total                 | ${forYear} |"
+println "|  by members            | ${member} |"
+println "|  by contributers       | ${contributor} |"
+println "|  by external           | ${community} |"
 def automatedPrs = issuesByYear.findAll{ it.pr }.findAll{ it.user.contains('-bot') }.size()
 def userPrs = issuesByYear.findAll{ it.pr }.findAll{ !it.user.contains('-bot') }.size()
-
-println "-----------------"
-println "automated     : ${automatedPrs}"
-println "user          : ${userPrs}"
-
+println "|  automated             | ${automatedPrs} |"
+println "|  user                  | ${userPrs} |"
+def prContrib = issuesByYear.findAll{ it.pr }.collect{ it.user }.unique().size()
+def issueContrib = issuesByYear.collect{ it.user }.unique().size()
+println "| Number of Contributers | "
+println "|  PRs                   | ${prContrib} |"
+println "|  Issues                | ${issueContrib} |"
 def numCommits = commits.size()
 def numAutomatedCommits = commits.findAll{ it.user.contains('-bot') }.size()
 def numUserCommits = commits.findAll{ !it.user.contains('-bot') }.size()
-
-println "-----------------"
-println "commits       : ${numCommits}"
-println "automated     : ${numAutomatedCommits}"
-println "user          : ${numUserCommits}"
+println "| Number of Commits      | "
+println "|  total                 | ${numCommits} |"
+println "|  automated             | ${numAutomatedCommits} |"
+println "|  user                  | ${numUserCommits} |"
