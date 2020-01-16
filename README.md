@@ -31,21 +31,21 @@ NOTE: this second script will take about 20mins to complete
 
 # The 2019 Stats
 
-| Stat          | Value         |
-| ------------- |--------------:|
-| JX Cli Releases        | 1336 |
-| Repos                  | 156 |
-| Number of PRs          |
-|  total                 | 16836 |
-|  by members            | 15695 |
-|  by contributers       | 699 |
-|  by external           | 327 |
-|  automated             | 11551 |
-|  user                  | 5285 |
-| Number of Contributers | 
-|  PRs                   | 307 |
-|  Issues                | 694 |
-| Number of Commits      | 
-|  total                 | 46590 |
-|  automated             | 32182 |
-|  user                  | 14408 |
+| Stats                  | 2019  | 2018  |
+| ---------------------- |------:|------:|
+| JX Cli Releases        |  1336 |  1043 |
+| Repos                  |   156 |     ? |
+| Number of PRs          |       |       |
+|  total                 | 16836 |  9139 |
+|  by members            | 15695 |  8537 |
+|  by contributers       |   699 |   462 |
+|  by external           |   327 |    49 |
+|  automated             | 11551 |  6791 |
+|  user                  |  5285 |  2348 |
+| Number of Contributers |       |       |
+|  PRs                   |   307 |   173 |
+|  Issues                |   694 |   474 |
+| Number of Commits      |       |       |
+|  total                 | 46590 | 37899 |
+|  automated             | 32182 | 17075 |
+|  user                  | 14408 | 20824 |
