@@ -29,7 +29,7 @@ groovy ./get_all.groovy
 
 NOTE: this second script will take about 20mins to complete
 
-# The 2019 Stats
+# The Stats
 
 | Stats                  | 2019  | 2018  |
 | ---------------------- |------:|------:|
